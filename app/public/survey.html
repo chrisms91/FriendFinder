@@ -20,6 +20,19 @@
 <body>
 
 	<div class="container">
+	<div class="jumbotron">
+			<h1 class="text-center"><i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder</h1>
+			<hr>
+			<h2 class="text-center">Answer a few basic questions. </h2>
+			<h2 class="text-center">Then find the friend with the greatest compatibility!</h2>
+			<br>
+
+			<div class="text-center">
+				<a href="/survey"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> More Survey</h4></button></a>	
+				<a href="/"><button type="button" class="btn btn-lg btn-default"><h4><span class="glyphicon glyphicon-home"></span><h4></button></a>
+			</div>
+
+		</div>
 
 		<h2>Survey Questions</h2>
 		<hr>
@@ -163,6 +176,29 @@
 	    </footer>
 
 	</div>
+
+	<!-- Modal -->
+	<div id="resultsModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+	
+			<!-- Modal content-->
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h2 class="modal-title"><strong>Best Match</strong></h2>
+				</div>
+				<div class="modal-body">
+					<h2 id="matchName"></h2>
+					<img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAftAAAAJDhhYmE2ZWM2LTQ0ZGMtNGQ3ZS04NWUxLTAyMTJmNGNlY2VlMg.jpg" alt="">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
 </body>
 </html>
 
@@ -201,14 +237,15 @@
 				scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), 
 				$("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
 			}
-			console.log(newSurvey);
 			
 			var currentURL = window.location.origin;
 			console.log("CurrentURL: " + currentURL);
 
 			$.post(currentURL + "/api/friends", newSurvey, function(data){
-				console.log("post from survey.html");
-				console.log(data);
+				console.log(data.photo);
+				$("#matchName").text(data.name);
+				$("matchImg").attr("src", data.photo);
+				$("#resultsModal").modal('toggle');
 			});
 		}
 	})

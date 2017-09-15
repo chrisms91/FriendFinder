@@ -16,14 +16,9 @@ function apiRouter(app, path){
         for(var i=0; i<friendsData.length; i++){
             differenceArray.push(calculateDiff(newFriend, friendsData[i]));
         }
-        console.log("differenceArray: ");
-        console.log(differenceArray);
+
         // Find the closest match, it returns index
         var closestMatchIndex = indexOfMin(differenceArray);
-
-        console.log("closestMatchIndex: " + closestMatchIndex);
-        console.log("matched");
-        console.log(friendsData[closestMatchIndex]);
 
         // response with matching friend's data in JSON format
         res.json(friendsData[closestMatchIndex]);
@@ -35,7 +30,6 @@ function apiRouter(app, path){
 
 // Calculate differences index by index
 function calculateDiff(newFriend, friend) {
-    console.log("called calDiff()")
     var diff = 0;
     var newScores = newFriend.scores;
     var friendScores = friend.scores;
@@ -49,7 +43,6 @@ function calculateDiff(newFriend, friend) {
 
 // Find the minimum difference from array and return its index
 function indexOfMin(arr) {
-    console.log("called indexofMin()")
     if (arr.length === 0){
         return -1;
     }
