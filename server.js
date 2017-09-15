@@ -8,15 +8,15 @@ var path = require("path");
 // ==================================================================
 var app = express();
 var PORT = process.env.PORT || 3000;
-var htmlRouter = require("./routing/htmlRoutes.js");
-var apiRouter = require("./routing/apiRoutes.js");
+var htmlRouter = require("./app/routing/htmlRoutes.js");
+var apiRouter = require("./app/routing/apiRoutes.js");
 
 // Sets up the Express app to handle data parsing
 // ==================================================================
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
-app.use(bodyparser.text());
-app.use(bodyparser.json({ type: "application/vnd.api+json"}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json"}));
 
 // Call Routers
 // ==================================================================
