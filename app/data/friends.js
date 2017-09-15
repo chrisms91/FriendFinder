@@ -1,3 +1,4 @@
+// Initial data for testing
 var friends = [
     {
         name: "Ahmed",
