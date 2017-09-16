@@ -1,10 +1,14 @@
 # FriendFinder
 
-> FriendFinder is a compatibility-based application. This full-stack site will take in results from users' surveys,
-> then compare their answers with those from other users. The app will then display the name and picture of the user
-> with the best overall match
+> FriendFinder is a compatibility-based application -- basically dating app using express.
 
-# Installation
+## Description
+
+This full-stack site will take in results from users' surveys,
+then compare their answers with those from other users. The app will then display the name and picture of the user
+with the best overall match
+
+## Installation
 
 1. You need to clone or download repo.
 
@@ -15,3 +19,10 @@
    - It will start web server with port 3000
 
 4. Access to `localhost:3000` and you are good to go :)
+
+
+To play with it, visit [HERE](https://damp-fortress-70269.herokuapp.com/)
+
+## Author
+
+Christopher Kim - (https://github.com/chrisms91)
