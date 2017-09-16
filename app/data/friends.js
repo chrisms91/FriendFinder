@@ -1,3 +1,4 @@
+// Filled with initial dummy data
 var friends = [
     {
         name: "Ahmed",
