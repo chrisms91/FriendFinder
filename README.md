@@ -1,6 +1,6 @@
 # FriendFinder
 
-> FriendFinder is a compatibility-based application -- basically dating app using express.
+FriendFinder is a compatibility-based application -- basically dating app using express.
 
 ## Description
 
@@ -11,18 +11,13 @@ with the best overall match
 ## Installation
 
 1. You need to clone or download repo.
-
 2. Go to the directory and Run the command `npm install` 
    - It will install npm packages needed to run FriendFinder
-
 3. Run command `node server`
    - It will start web server with port 3000
-
 4. Access to `localhost:3000` and you are good to go :)
 
-
-To play with it, visit [HERE](https://damp-fortress-70269.herokuapp.com/)
+> If you want to play with it w/o install, it lives [HERE](https://damp-fortress-70269.herokuapp.com/)
 
 ## Author
-
-Christopher Kim - (https://github.com/chrisms91)
+Christopher Kim - https://github.com/chrisms91
