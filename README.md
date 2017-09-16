@@ -17,7 +17,7 @@ with the best overall match
    - It will start web server with port 3000
 4. Access to `localhost:3000` and you are good to go :)
 
-> If you want to play with it w/o install, it lives [HERE](https://damp-fortress-70269.herokuapp.com/)
+**If you want to play with it w/o install, it lives [HERE](https://damp-fortress-70269.herokuapp.com/)**
 
 ## Author
 Christopher Kim - https://github.com/chrisms91
